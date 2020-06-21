@@ -1,3 +1,4 @@
+# FROM https://github.com/serioeseGmbH/BMI160
 # based on https://github.com/arduino/ArduinoCore-arc32/blob/master/libraries/CurieIMU/src/BMI160.cpp
 
 from BMI2160 import registers
@@ -6,7 +7,6 @@ from BMI2160 import definitions
 
 from struct import unpack
 from BMI2160.sleep import sleep_us, sleep_ms
-
 
 class BMI160:
 

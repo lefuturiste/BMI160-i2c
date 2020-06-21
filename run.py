@@ -8,4 +8,4 @@ print('init done')
 while True:
   print(sensor.getMotion6())
   #print("{0:>8}{1:>8}{2:>8}{3:>8}{4:>8}{5:>8}".format())
-  sleep(0.01)
+  sleep(0.2)
