@@ -17,13 +17,13 @@ class BMI160I2C(BMI160):
     # old: self.i2c.writeto(self.addr, bytes([reg, data]))
 
   def _reg_read(self, reg):
-    return self._regs_read(reg, 1)
+    return self._regs_read(reg, 1)[0]
 
   def _regs_read(self, reg, n):
-    #self.bus.write_i2c_block_data(self.addr, 0, bytes([reg]))
+    self.bus.write_i2c_block_data(self.addr, 0, bytes([reg]))
     # old: self.i2c.writeto(self.addr, bytes([reg]))
     sleep_us(2)
-    result = self.bus.read_byte_data(self.addr, n)
+    result = self.bus.read_i2c_block_data(self.addr, 0, n)
     print('< ', result)
     #print(result)
     return result
