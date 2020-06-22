@@ -1,20 +1,26 @@
 # FROM https://github.com/serioeseGmbH/BMI160
 # based on https://github.com/arduino/ArduinoCore-arc32/blob/master/libraries/CurieIMU/src/BMI160.cpp
 
-from BMI2160 import registers
-from BMI2160 import commands
-from BMI2160 import definitions
+from BMI160_i2c import registers
+from BMI160_i2c import commands
+from BMI160_i2c import definitions
+from BMI160_i2c.sleep import sleep_us, sleep_ms
 
 from struct import unpack
-from BMI2160.sleep import sleep_us, sleep_ms
+from smbus2 import SMBus, i2c_msg
 
-class BMI160:
+class Driver:
 
   # Power on and prepare for general usage.
   # This will activate the device and take it out of sleep mode (which must be done
   # after start-up). This function also sets both the accelerometer and the gyroscope
   # to default range settings, namely +/- 2g and +/- 250 degrees/sec.
-  def __init__(self):
+  def __init__(self, addr=0x68):
+    self.addr = addr
+    
+    # Initialize the i2c bus driver
+    self.bus = SMBus(1)
+    
     # Issue a soft-reset to bring the device into a clean state
     self._reg_write(registers.CMD, commands.SOFT_RESET)
     sleep_ms(1)
@@ -1889,3 +1895,26 @@ class BMI160:
   # @param data 8-bit register value
   def setRegister(self, reg, data):
     self._reg_write(reg, data)
+
+  # ──────────────────────────────────────────────────────────────────────────────
+  #                               I2C COMMUNICATION                               
+  # ──────────────────────────────────────────────────────────────────────────────
+  def _reg_write(self, reg, data):
+    write = i2c_msg.write(self.addr, [reg, data])
+    self.bus.i2c_rdwr(write)
+
+  def _reg_read(self, reg):
+    return self._regs_read(reg, 1)[0]
+
+  def _regs_read(self, reg, n):
+    write = i2c_msg.write(self.addr, [reg])
+    sleep_us(2)
+    read = i2c_msg.read(self.addr, n)
+    self.bus.i2c_rdwr(write, read)
+    result = list(read)
+    #print('< ', result)
+    return result
+
+  def close(self):
+    self.bus.close()
+
