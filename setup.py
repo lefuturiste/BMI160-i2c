@@ -1,29 +1,27 @@
 import setuptools
 
-with open("README.md", "r") as fh:
+with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-  name='BMI160',
+  name='BMI160_i2c',
   version='0.1',
-  scripts=['dokr'] ,
-  author="Matthieu Bessat - lefuturiste",
-  author_email="contact@lefuturiste.fr",
+  author='Matthieu Bessat - lefuturiste',
+  author_email='contact@lefuturiste.fr',
   description="A I2C driver library to use the BMI160 sensor (acclerometer/gyro) with python on a raspberrypi",
   long_description=long_description,
-  long_description_content_type="text/markdown",
-  url="https://github.com/javatechy/dokr",
+  long_description_content_type='text/markdown',
+  url='https://github.com/lefuturiste/BMI160-i2c',
   packages=setuptools.find_packages(),
-  install_requires=["smbus2"],
-      keywords="adafruit blinka circuitpython micropython circuitplayground bluefruit CLUE ble",
-
+  install_requires=['smbus2'],
+  keywords="python lefuturiste driver BMI160 acclerometer gyroscope gyro BMI bosch sensortech smbus2 sensor library i2c",
   classifiers=[
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: Raspberry PI",
-    "Intended Audience :: Developers",
-    "Topic :: Software Development :: Libraries",
-    "Topic :: System :: Hardware",
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Intended Audience :: Developers',
+    'Topic :: Software Development :: Libraries',
+    'Topic :: System :: Hardware',
   ],
+  python_requires='>=3.6',
 )
 

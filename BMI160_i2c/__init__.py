@@ -1917,4 +1917,3 @@ class Driver:
 
   def close(self):
     self.bus.close()
-

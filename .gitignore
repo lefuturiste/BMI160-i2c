@@ -1,4 +1,8 @@
 node
 .vscode
 __pycache__
-
+BMI160_i2c/__pycache__
+build
+dist
+*.egg-info
+test.py
