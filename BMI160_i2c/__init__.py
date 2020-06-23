@@ -1880,7 +1880,7 @@ class Driver:
   # @see getMotion6()
   # @see registers.GYRO_Y_L
   def getRotationZ(self):
-    raw = self._regs_read(registers.GYRO_Y_L, 2)
+    raw = self._regs_read(registers.GYRO_Z_L, 2)
     val = unpack('<h', bytes(raw))
     return val
 
