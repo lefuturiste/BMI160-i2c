@@ -6,7 +6,7 @@ This library was tested successfully on a Raspberry Pi 3 B
 
 ## Installation
 
-The package is [available on pypi.org](https://pypi.org/project/BMI160-i2c/0.1/).
+The package is [available on pypi.org](https://pypi.org/project/BMI160-i2c).
 
 You can install this package using this command
 
