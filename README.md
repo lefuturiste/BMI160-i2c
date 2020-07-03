@@ -75,3 +75,12 @@ You can also use these alternative methods to contact me:
 - Discord: `lefuturiste#5297`
 
 - Discord server: [https://discord.gg/9M4vVsX](https://discord.gg/9M4vVsX)
+
+## Maintenance
+
+- Increment the version used in `setup.py`
+- Build the package: `python3 setup.py sdist bdist_wheel`
+- Publish the package: `python3 -m twine upload dist/*`
+- Enter `__token__` for the username
+- Enter `pypi-{....}` for the password
+- And tada!
