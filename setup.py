@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
   name='BMI160_i2c',
-  version='0.4',
+  version='0.5',
   author='Matthieu Bessat - lefuturiste',
   author_email='contact@lefuturiste.fr',
   description="A I2C driver library to use the BMI160 sensor (acclerometer/gyro) with python on a raspberrypi",

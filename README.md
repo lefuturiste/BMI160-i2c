@@ -1,6 +1,6 @@
 # BMI160-i2c
 
-I2C library to use the Inertial Mesurment Unit BMI160.
+I2C library to use the Inertial Mesurment Unit BMI160. Heavily inspired on @serioeseGmbH code [serioeseGmbH/BMI160](https://github.com/serioeseGmbH/BMI160), in fact I just adapted his code.
 
 This library was tested successfully on a Raspberry Pi 3 B
 
