@@ -37,3 +37,9 @@ FOC_ACC_Y_LEN       = (2)
 FOC_ACC_X_BIT       = (4)
 FOC_ACC_X_LEN       = (2)
 FOC_GYR_EN          = (6)
+
+##FIFO config options
+FIFO_TIME_EN_BIT    = (1)
+FIFO_MAG_EN_BIT     = (5)
+FIFO_ACC_EN_BIT     = (6)
+FIFO_GYR_EN_BIT     = (7)
