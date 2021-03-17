@@ -43,3 +43,20 @@ FIFO_TIME_EN_BIT    = (1)
 FIFO_MAG_EN_BIT     = (5)
 FIFO_ACC_EN_BIT     = (6)
 FIFO_GYR_EN_BIT     = (7)
+
+## Step counter definitions
+STEP_MODE_NORMAL    = (0)
+STEP_MODE_SENSITIVE = (1)
+STEP_MODE_ROBUST    = (2)
+STEP_MODE_UNKNOWN   = (0)
+STEP_BUF_MIN_BIT    = (0)
+STEP_CNT_EN_BIT     = (3)
+STEP_EN_BIT         = (3)
+STEP_BUF_MIN_LEN    = (4)
+
+## Interrupt definitions
+INT1_OUTPUT_EN      = (3)
+INT1_OD             = (2)
+INT1_LVL            = (1)
+LATCH_MODE_BIT      = (0)
+LATCH_MODE_LEN      = (4)
