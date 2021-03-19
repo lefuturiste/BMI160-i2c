@@ -732,8 +732,8 @@ class Driver:
   # @see registers.STEP_CNT_L
   def getStepCount(self):
     buffer = [0]*2
-    buffer[0] = registers.STEP_CNT_L
-    serial_buffer_transfer(buffer, 1, 2)
+    buffer[0] = self._reg_read(registers.STEP_CNT_L)
+    buffer[1] = self._reg_read(registers.STEP_CNT_H)
     return ((buffer[1]) << 8) | buffer[0]
 
   # Resets the current number of detected step movements (Step Count) to 0.
@@ -1246,7 +1246,6 @@ class Driver:
   def getFIFOCount(self):
     buffer = [0]*2
     buffer[0] = registers.FIFO_LENGTH_0
-    serial_buffer_transfer(buffer, 1, 2)
     return ((buffer[1]) << 8) | buffer[0]
 
   # Reset the FIFO.
@@ -1317,7 +1316,6 @@ class Driver:
     # TODO fix here
     if (length):
       data[0] = registers.FIFO_DATA
-      serial_buffer_transfer(data, 1, length)
 
   # Get full set of interrupt status bits from INT_STATUS[0] register.
   # Interrupts are typically cleared automatically.
