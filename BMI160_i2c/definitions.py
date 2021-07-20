@@ -1,4 +1,5 @@
 ## bit field offsets and lengths
+ACC_OFFSET_EN       = (6)
 ACC_PMU_STATUS_BIT  = (4)
 ACC_PMU_STATUS_LEN  = (2)
 GYR_PMU_STATUS_BIT  = (2)
