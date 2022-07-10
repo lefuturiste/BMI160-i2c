@@ -1,8 +1,12 @@
 from time import sleep
 from BMI160_i2c import Driver
+from BMI160_i2c import definitions
+
+I2C_BUS_ID = 1
+BMI160_ADDR = 0x69
 
 print('Trying to initialize the sensor...')
-sensor = Driver()
+sensor = Driver(BMI160_ADDR, I2C_BUS_ID) 
 print('Initialization done')
 
 # Step detection requires interrupt config
