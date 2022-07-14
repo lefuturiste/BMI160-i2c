@@ -70,11 +70,9 @@ Feel free to open a issue or a pull request I will be happy to answer any questi
 
 You can also use these alternative methods to contact me: 
 
-- Twitter: [@_le_futuriste](https://twitter.com/_le_futuriste)
-
+- Email: [contact@lefuturiste.fr](mailto:contact@lefuturiste.fr) 
+- Mastodon: [lefuturiste@mstdn.io](https://mstdn.io/@lefuturiste)
 - Discord: `lefuturiste#5297`
-
-- Discord server: [https://discord.gg/9M4vVsX](https://discord.gg/9M4vVsX)
 
 ## Maintenance
 
