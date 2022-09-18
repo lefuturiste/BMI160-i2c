@@ -241,7 +241,7 @@ class Driver:
   def setFullScaleGyroRange(self, range, real):
     self._reg_write_bits(registers.GYRO_RANGE, range,
       definitions.GYRO_RANGE_SEL_BIT, definitions.GYRO_RANGE_SEL_LEN)
-    gyro_range = real
+    self.gyro_range = real
 
   # Get full-scale accelerometer range.
   # The FS_SEL parameter allows setting the full-scale range of the accelerometer
@@ -267,7 +267,7 @@ class Driver:
   def setFullScaleAccelRange(self, range, real):
     self._reg_write_bits(registers.ACCEL_RANGE, range,
       definitions.ACCEL_RANGE_SEL_BIT, definitions.ACCEL_RANGE_SEL_LEN)
-    accel_range = real
+    self.accel_range = real
 
   # Get accelerometer offset compensation enabled value.
   # @see getXAccelOffset()
