@@ -68,12 +68,6 @@ Look at all the methods available [here](https://github.com/lefuturiste/BMI160-i
 
 Feel free to open a issue or a pull request I will be happy to answer any questions or help you with this library.
 
-You can also use these alternative methods to contact me: 
-
-- Email: [contact@lefuturiste.fr](mailto:contact@lefuturiste.fr) 
-- Mastodon: [lefuturiste@mstdn.io](https://mstdn.io/@lefuturiste)
-- Discord: `lefuturiste#5297`
-
 ## Maintenance
 
 - Increment the version used in `setup.py`
