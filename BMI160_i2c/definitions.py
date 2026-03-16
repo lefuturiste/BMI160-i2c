@@ -61,3 +61,16 @@ INT1_OD             = (2)
 INT1_LVL            = (1)
 LATCH_MODE_BIT      = (0)
 LATCH_MODE_LEN      = (4)
+
+# No Motion
+NOMOTION_EN_BIT     = (0)
+NOMOTION_EN_LEN     = (3)
+NOMOTION_INT_BIT    = (7)
+NOMOTION_DUR_BIT    = (2)
+NOMOTION_DUR_LEN    = (6)
+NOMOTION_SEL_BIT    = (0)
+NOMOTION_SEL_LEN    = (1)
+
+# Frequency
+ACCEL_RATE_SEL_BIT  = (0)
+ACCEL_RATE_SEL_LEN  = (4)
